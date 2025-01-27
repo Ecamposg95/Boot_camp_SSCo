@@ -1,3 +1,4 @@
+
 # Boot_camp_SSCo
 
 Repositorio del Boot Camp de Smart Site Company (SSCo), diseñado para entrenar y capacitar a futuros desarrolladores y diseñadores en tecnologías clave para el desarrollo web y la creación de interfaces de usuario efectivas.
@@ -15,6 +16,7 @@ Este repositorio incluye:
 - **Scrum Master**: Emmanuel Campos Genaro
 
 
+## ligas
 1. **Clona este repositorio**:
    ```bash
    git clone https://github.com/Ecamposg95/Boot_camp_SSCo.git
