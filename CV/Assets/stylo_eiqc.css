@@ -134,7 +134,7 @@ h1,h2,h3 {
 
 /*Imagenes*/
 .hero {
-    background-image: url(../img/Ciberseguridad.jpg);
+    background-image: url(/assets/img/Ciberseguridad.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
