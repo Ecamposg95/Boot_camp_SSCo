@@ -14,7 +14,7 @@ Este repositorio incluye:
 ## Autores
 
 - **Scrum Master**: Emmanuel Campos Genaro
-
+- **Scrum Developer**: Edgar Iván Quiroz Calderón
 
 ## ligas
 1. **Clona este repositorio**:
