@@ -1,7 +1,0 @@
-BootCamp/
-*.pyc
-__pycache__/
-*.pyo
-*.pyd
-*.env
-.DS_Store
