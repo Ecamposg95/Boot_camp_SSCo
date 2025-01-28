@@ -15,6 +15,7 @@ Este repositorio incluye:
 
 - **Scrum Master**: Emmanuel Campos Genaro
 - **Scrum Developer**: Edgar Iván Quiroz Calderón
+- **Scrum Developer**: Flor Araceli Flores Aguilar 
 
 ## ligas
 1. **Clona este repositorio**:

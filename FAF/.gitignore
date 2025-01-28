@@ -1,0 +1,8 @@
+# Ignorar entornos virtuales
+venv/
+*.pyc
+__pycache__/
+
+# Ignorar configuraciones de IDEs comunes
+.idea/
+.vscode/
