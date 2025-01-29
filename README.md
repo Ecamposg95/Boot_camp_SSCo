@@ -17,6 +17,7 @@ Este repositorio incluye:
 - **Scrum Developer**: Edgar Iván Quiroz Calderón
 - **Scrum Developer**: Flor Araceli Flores Aguilar 
 - **Scrum Developer**: Nancy Chavez Salguero 
+- **Scrum Developer**: Flores Mendieta Gibrán
 
 ## ligas
 1. **Clona este repositorio**:
