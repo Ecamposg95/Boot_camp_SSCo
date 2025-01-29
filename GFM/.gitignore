@@ -1,0 +1,5 @@
+__pycache__/
+.env
+venv/
+*.pyc
+\to_do_list
