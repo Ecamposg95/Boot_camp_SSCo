@@ -43,7 +43,7 @@ def login():
     user = User.query.filter_by(username=username, password=password).first()
 
     if not user:
-        return jsonify({"msg": "Credenciales incorrectas"}), 401
+        return jsonify({"mensaje": "Credenciales incorrectas"}), 401
 
     access_token = create_access_token(identity=user.id)
     return jsonify({"access_token": access_token}), 200
@@ -69,7 +69,7 @@ def add_task():
     db.session.add(new_task)
     db.session.commit()
 
-    return jsonify({"msg": "Tarea agregada exitosamente"}), 201
+    return jsonify({"mensaje": "Tarea agregada exitosamente"}), 201
 
 # Ruta para eliminar una tarea (DELETE /tasks/<id>)
 @app.route('/tasks/<int:id>', methods=['DELETE'])
@@ -79,12 +79,12 @@ def delete_task(id):
     task = Task.query.filter_by(id=id, user_id=current_user_id).first()
 
     if not task:
-        return jsonify({"msg": "Tarea no encontrada"}), 404
+        return jsonify({"mensaje": "Tarea no encontrada"}), 404
 
     db.session.delete(task)
     db.session.commit()
 
-    return jsonify({"msg": "Tarea eliminada exitosamente"}), 200
+    return jsonify({"mensaje": "Tarea eliminada exitosamente"}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
