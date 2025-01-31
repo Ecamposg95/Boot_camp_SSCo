@@ -1,0 +1,13 @@
+__pycache__/
+database.db
+instance/
+.env
+
+# Ignorar entornos virtuales
+venv/
+*.pyc
+__pycache__/
+
+# Ignorar configuraciones de IDEs comunes
+.idea/
+.vscode/
