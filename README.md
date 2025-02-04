@@ -11,6 +11,8 @@ Este repositorio incluye:
 - **Proyectos Guiados**: Ejemplos de implementación de interfaces profesionales, como la creación de un CV en HTML y CSS.
 - **Recursos de Aprendizaje**: Código comentado, guías y material de referencia para apoyar el aprendizaje.
 
+## 4 Semanas
+
 ## Autores
 
 - **Scrum Master**: Emmanuel Campos Genaro
