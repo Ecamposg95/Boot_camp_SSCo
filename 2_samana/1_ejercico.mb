@@ -1,0 +1,22 @@
+Ejercicio Avanzado: Creación de un CRUD con Flask, SQLite, Seeders y una Interfaz Web
+Objetivo:
+Desarrollar una aplicación en Flask que incluya una base de datos SQLite, una API RESTful que permita obtener y modificar datos con Postman, y una interfaz web para gestionar los datos desde un frontend básico.
+
+🔹 Requerimientos
+1.	Base de Datos SQLite con Seeders:
+o	Crear una tabla productos con campos id, nombre, descripcion, precio.
+o	Insertar datos iniciales en la base de datos mediante un script de seeding.
+2.	API RESTful para gestionar productos:
+o	GET /productos: Obtener todos los productos.
+o	POST /productos: Crear un nuevo producto.
+o	PUT /productos/<id>: Modificar un producto existente.
+o	DELETE /productos/<id>: Eliminar un producto.
+3.	Pruebas con Postman:
+o	Usar Postman para probar la API (consultas GET, POST, PUT, DELETE).
+4.	Interfaz Web (Frontend en HTML/CSS/JS con Fetch API o Axios):
+o	Mostrar la lista de productos en una tabla.
+o	Formulario para agregar productos.
+o	Botones para modificar y eliminar productos.
+5.	Subir el proyecto a GitHub.
+Carpeta con su apellidos 
+git@github.com:Ecamposg95/Boot_camp_SSCo.git 
