@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+
+    <!-- Formulario para agregar productos -->
+    <form onsubmit="event.preventDefault(); agregarProducto();">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="descripcion" placeholder="Descripción" required>
+        <input type="number" id="precio" placeholder="Precio" step="0.01" required>
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+    <!-- Tabla de productos -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-productos">
+            <!-- Aquí se cargarán los productos -->
+        </tbody>
+    </table>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
+
