@@ -1,0 +1,5 @@
+Flask
+Flask-SQLAlchemy #para interacticar con la base de datos
+Werkzeug  #asociar URLs a endpoints de la aplicación
+mysql-connector-python==8.0.32 #conectar y trabajar la base de datos
+Flask-Migrate

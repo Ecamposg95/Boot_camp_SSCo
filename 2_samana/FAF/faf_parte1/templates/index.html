@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+<link rel="stylesheet" href="/static/style.css"></head>
+<body>
+     <h1>Productos</h1>
+
+     <form id="product-form">
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="descripcion" placeholder="Descripción">
+        <input type="number" id="precio" placeholder="Precio">
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+    <h3>Lista de Productos</h3>
+    <table>
+        <thead>            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="product-list">
+        </tbody>
+    </table>
+
+    
+    <script src="static/script.js"></script>
+
+</body>
+</html>
