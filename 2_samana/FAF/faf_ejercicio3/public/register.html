@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Facial</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Registro Facial</h1>
+    <p>Captura varias imágenes para registrar tu rostro.</p>
+  </header>
+
+  <div class="container">
+    <div class="video-container">
+      <video id="video" width="640" height="480" autoplay></video>
+    </div>
+
+    <div class="action-container">
+      <!-- Campo para ingresar el nombre de usuario -->
+      <label for="username">Nombre de usuario:</label>
+      <input type="text" id="username" placeholder="Ingresa tu usuario" required />
+      
+      <button id="capture-process" onclick="captureAndProcess(false)">Registrar</button>
+    </div>
+  </div>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+  <script src="/scripts.js"></script>
+  <script src="/Face.js"></script>
+</body>
+</html>

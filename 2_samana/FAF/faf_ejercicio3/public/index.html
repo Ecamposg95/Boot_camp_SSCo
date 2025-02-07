@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Facial</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenido al Sistema de Login Facial</h1>
+  </header>
+
+  <div class="container">
+    <div class="login-container">
+      <h2>Iniciar Sesión</h2>
+      <p>Utiliza tu rostro para iniciar sesión.</p>
+      <button id="start-login" onclick="window.location.href='login.html'">Iniciar Login Facial</button>
+    </div>
+
+    <div class="register-container">
+      <h2>Registrar Usuario</h2>
+      <p>Si eres un nuevo usuario, regístrate con tu rostro.</p>
+      <button id="start-register" onclick="window.location.href='register.html'">Registrar Rostro</button>
+    </div>
+  </div>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+  <script src="/scripts.js"></script>
+
+
+</body>
+</html>
