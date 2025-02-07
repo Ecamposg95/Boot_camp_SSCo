@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login con Reconocimiento Facial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login con Reconocimiento Facial</h2>
+        <video id="video" autoplay></video>
+        <button onclick="captureImage()">Capturar Imagen</button>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <button onclick="login()">Iniciar Sesión</button>
+        <p id="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
