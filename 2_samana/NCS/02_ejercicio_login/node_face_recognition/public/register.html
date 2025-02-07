@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" href="/public/register.html">
+</head>
+<body>
+    <h1>¡Bienvenido, <span id="user-name-display"></span>!</h1>
+</body>
+<script>
+    // Recuperar el nombre del usuario almacenado en el localStorage
+    const userName = localStorage.getItem("userName");
+    document.getElementById("user-name-display").textContent = userName || "Invitado";
+</script>
+</html>
+
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", async function (event) {
+    event.preventDefault(); // Evita que la página se recargue
+
+    let name = document.getElementById("name").value;
+    let photo = document.getElementById("photo").files[0];
+
+    // Verificación de que ambos campos no estén vacíos
+    if (!name || !photo) {
+        alert("Por favor, ingresa un nombre y selecciona una imagen.");
+        return;
+    }
+
+    // Verificación de que el archivo sea una imagen válida (por ejemplo, PNG, JPG, JPEG)
+    const validImageTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+    if (!validImageTypes.includes(photo.type)) {
+        alert("Por favor, selecciona una imagen en formato JPG, JPEG o PNG.");
+        return;
+    }
+
+    let formData = new FormData();
+    formData.append("name", name);
+    formData.append("photo", photo);
+
+    try {
+        let response = await fetch("/register", {
+            method: "POST",
+            body: formData
+        });
+
+        let result = await response.json();
+
+        // Verificación de la respuesta del servidor
+        if (result.success) {
+            alert("Registro exitoso");
+            window.location.href = "/login"; // Redirigir al login después del registro
+
+            // Limpiar el formulario después del registro exitoso
+            document.getElementById("registerForm").reset();
+            document.getElementById("preview").style.display = "none";
+        } else {
+            alert("Error en el registro: " + result.message);
+        }
+    } catch (error) {
+        console.error("Error en la solicitud:", error);
+        alert("Hubo un problema al enviar los datos.");
+    }
+});
+
+// Mostrar vista previa de la imagen seleccionada
+document.getElementById("photo").addEventListener("change", function (event) {
+    let file = event.target.files[0];
+    if (file) {
+        let reader = new FileReader();
+        reader.onload = function (e) {
+            document.getElementById("preview").src = e.target.result;
+            document.getElementById("preview").style.display = "block";
+        };
+        reader.readAsDataURL(file);
+    }
+});
+</script>

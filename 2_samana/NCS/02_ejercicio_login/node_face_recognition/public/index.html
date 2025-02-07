@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Facial</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Archivo de estilos -->
+</head>
+<body>
+    <h1>Registro Facial</h1>
+
+    <!-- Formulario de inicio de sesión -->
+    <div id="login-section">
+        <input type="text" id="user-name" placeholder="Ingrese su nombre" required />
+        <button id="login-button">Registrar</button>
+    </div>
+
+    <!-- Sección de cámara y registro -->
+    <div id="camera-section" class="hidden">
+        <h2>Bienvenido, <span id="display-name"></span></h2>
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas" class="hidden"></canvas>
+        <button id="capture-button">Capturar Foto</button>
+        <button id="register-button">Iniciar Sesion</button>
+    </div>
+
+    <script src="script.js"></script> <!-- Archivo de lógica -->
+</body>
+</html>
