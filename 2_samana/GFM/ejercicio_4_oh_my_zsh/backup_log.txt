@@ -1,0 +1,17 @@
+ORIGEN="/home/gibran_flores/origen"
+
+DESTINO="/home/gibran_flores/respaldo"
+
+TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+
+ARCHIVO="backup_$TIMESTAMP.tar.gz"
+
+# Crear la copia de seguridad
+tar -czvf "$DESTINO/$ARCHIVO" "$ORIGEN"
+
+# Mensaje de confirmación
+echo "Copia de seguridad creada: $DESTINO/$ARCHIVO"
+
+chmod +x /home/gibran_flores/backup.sh
+
+/home/gibran_flores/backup.sh

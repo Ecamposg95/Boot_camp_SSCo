@@ -1,0 +1,19 @@
+
+Comandos basicos para usar la consola
+
+$ pwd       #ver la ruta
+/home/manz
+
+$ tree /var/log # listar el contenido en forma de arbol
+
+$ ls / # fichar los archivos
+
+$ cd manz        # Accede a una ruta relativa
+
+$ file /etc/hosts   
+
+$ cat /etc/timezone # mostrar contenido
+
+$ cp /home/manz/origen.txt /home/tux/destino.txt # copiar ficheros
+
+$ mv /home/tux/info.txt /home/manz/ # mover ficheros
