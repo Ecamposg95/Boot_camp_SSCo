@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Definir las carpetas de origen y destino de la copia de seguridad
+ORIGEN="$HOME/Desktop"
+DESTINO="$HOME/Documentos/modulo"
+LOG_FILE="$HOME/monitoreo_log.txt"
+
+# Crear la carpeta de destino si no existe
+mkdir -p "$DESTINO"
+
+echo "Monitoreo de cambios en $ORIGEN..."
+
+# Iniciar un ciclo de monitoreo usando inotifywait
+inotifywait -m -r -e create -e modify -e delete "$ORIGEN" --format '%T %w %f %e' --timefmt '%Y-%m-%d %H:%M:%S' | while read LINE
+do
+    # Log de eventos en el archivo
+    echo "$LINE" >> "$LOG_FILE"
+
+    # Realizar una copia de seguridad cuando hay cambios
+    rsync -av --delete "$ORIGEN" "$DESTINO"
+done

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Definir la carpeta a hacer copia de seguridad
+SOURCE_DIR="Documents/Modulo-2"
+
+# Definir el directorio de destino para las copias de seguridad
+BACKUP_DIR="Documents/Modulo-3"
+
+# Obtener el timestamp actual
+TIMESTAMP=$(date +'%Y-%m-%d_%H-%M-%S')
+
+# Crear un nombre para el archivo de respaldo con el timestamp
+BACKUP_FILE="${BACKUP_DIR}/backup_${TIMESTAMP}.tar.gz"
+
+# Archivo de log para registrar la ejecución
+LOG_FILE="${BACKUP_DIR}/backup_log.txt"
+
+# Crear la copia de seguridad
+tar -czf "$BACKUP_FILE" "$SOURCE_DIR"
+
+# Verificar si la copia fue exitosa
+if [ $? -eq 0 ]; then
+    # Escribir en el log si la copia fue exitosa
+    echo "[$(date)] - Backup exitoso: $BACKUP_FILE" >> "$LOG_FILE"
+else
+    # Escribir en el log si hubo un error
+    echo "[$(date)] - Error al realizar el backup de $SOURCE_DIR" >> "$LOG_FILE"
+fi
