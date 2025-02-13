@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Archivos en el directorio actual:"
+ls -l
+echo "Cantidad de archivos .txt:"
+ls *.txt | wc -l

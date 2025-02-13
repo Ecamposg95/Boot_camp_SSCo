@@ -1,0 +1,42 @@
+Módulo 1: Configuración y Personalización de oh-my-zsh en Kali Linux
+1 Instalación de oh-my-zsh
+   sudo apt update && sudo apt install git -y
+
+Luego, instala oh-my-zsh:
+   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+Al finalizar, puedes cambiar tu shell predeterminado a zsh con:
+   chsh -s $(which zsh)
+
+Cierra la sesión y vuelve a entrar para aplicar los cambios.
+
+2 Personalización del Tema
+   Oh-my-zsh viene con varios temas. Para cambiar el tema, edita tu archivo de configuración:
+   nano ~/.zshrc
+
+Busca la línea:
+
+   ZSH_THEME="robbyrussell"
+   ZSH_THEME="agnoster"
+
+Guarda los cambios (CTRL + X, luego Y y Enter) y recarga la configuración:
+
+   source ~/.zshrc
+
+3 Instalación de Plugins Útiles
+Para mejorar la experiencia con oh-my-zsh, puedes instalar algunos plugins. Edita nuevamente ~/.zshrc y busca esta línea:
+
+   plugins=(git)
+
+Añade otros plugins útiles, por ejemplo:
+
+   plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+Después, instala los plugins:
+
+   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+   git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+Recarga zsh para aplicar los cambios:
+
+   source ~/.zshrc
